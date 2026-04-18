@@ -9,34 +9,59 @@
 ### 🧩 Структура репозитория
 
 ```
-├── .github/
-├── .gitignore
-├── tests/
-│ ├── Locators/
-│ ├── Actions/
-│ ├── Assertions/
-├── package-lock.json/
-├── playwright.config.ts
-├── package.json
-└── README.md
+📦 root/
+├── 📂 .github/ # CI/CD настройки
+│ └── 📂 workflows/
+│ └── 📄 playwright.yml
+│
+├── 📂 tests/ # Все тесты
+│ │
+│ ├── 📂 Locators/ # Поиск элементов (8 файлов)
+│ │ ├── 🎯 getByRole.spec.ts
+│ │ ├── 🔍 getByText.spec.ts
+│ │ ├── 🏷️ getByLabel.spec.ts
+│ │ ├── ✏️ getByPlaceholder.spec.ts
+│ │ ├── 🖼️ getByAltText.spec.ts
+│ │ ├── 📌 getByTitle.spec.ts
+│ │ ├── 🆔 getByTestId.spec.ts
+│ │ └── 🎨 css.spec.ts
+│ │
+│ ├── 📂 Actions/ # Действия с элементами (5 файлов)
+│ │ ├── 🖱️ click.spec.ts
+│ │ ├── ✨ hover.spec.ts
+│ │ ├── ⌨️ fill.spec.ts
+│ │ ├── ✅ check.spec.ts
+│ │ └── 📋 selectOptions.spec.ts
+│ │
+│ └── 📂 Assertions/ # Проверки (7 файлов)
+│ ├── 👁️ toBeVisible.spec.ts
+│ ├── 📝 toContainText.spec.ts
+│ ├── 🔤 toHaveText.spec.ts
+│ ├── 💾 toHaveValue.spec.ts
+│ ├── 🏷️ toHaveAttribute.spec.ts
+│ ├── 🎨 toHaveClass.spec.ts
+│ └── 🔗 toHaveUrl.spec.ts
+│
+├── ⚙️ playwright.config.ts # Конфигурация Playwright
+├── 📦 package.json # Зависимости
+├── 🔒 package-lock.json # Lock-файл
+├── 🙈 .gitignore # Git ignore
+└── 📖 README.md # Документация
 ```
 
 ---
 
 ### 🚀 Как запустить тесты локально
 
-📋 Требования
-
+```
 Убедитесь, что у вас установлено:
 
-- **Node.js** версии 18 или выше ([скачать](https://nodejs.org/))
-- **Git** ([скачать](https://git-scm.com/))
+- Node.js версии 18 или выше ([скачать](https://nodejs.org/))
+- Git ([скачать](https://git-scm.com/))
 
-⚙️ Установка и запуск
-```
 Откройте терминал (командную строку) и выполните команды:
 
-1. Клонируйте репозиторий
+1. Склонируйте репозиторий
 git clone https://github.com/OksanaKZ/Playwright-tests-portfolio.git
 cd Playwright-tests-portfolio
 
